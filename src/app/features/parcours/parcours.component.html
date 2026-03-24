@@ -1,0 +1,57 @@
+<section id="parcours">
+  <app-section-label text="01 — Parcours" title="Mon parcours" />
+
+  <div class="timeline-grid">
+    <!-- EXPÉRIENCES -->
+    <div class="timeline-col">
+      <div class="col-title">
+        Expériences professionnelles
+        <span class="col-line"></span>
+      </div>
+      <div class="timeline">
+        @for (exp of experiences; track exp.title; let i = $index) {
+          <div class="timeline-item" appScrollReveal="slide-left" [revealDelay]="i * 100">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">{{ exp.date }}</div>
+            <div class="timeline-title">{{ exp.title }}</div>
+            <div class="timeline-org">{{ exp.org }}</div>
+            <div class="timeline-desc">{{ exp.desc }}</div>
+            @if (exp.tags.length) {
+              <div class="timeline-tags">
+                @for (tag of exp.tags; track tag) {
+                  <span class="tag" [class.accent]="exp.accent">{{ tag }}</span>
+                }
+              </div>
+            }
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- FORMATION -->
+    <div class="timeline-col">
+      <div class="col-title">
+        Formation
+        <span class="col-line"></span>
+      </div>
+      <div class="timeline">
+        @for (f of formations; track f.title; let i = $index) {
+          <div class="timeline-item" appScrollReveal="slide-right" [revealDelay]="i * 100">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">{{ f.date }}</div>
+            <div class="timeline-title">{{ f.title }}</div>
+            <div class="timeline-org">{{ f.org }}</div>
+            <div class="timeline-desc">{{ f.desc }}</div>
+            @if (f.tags?.length) {
+              <div class="timeline-tags">
+                @for (tag of f.tags!; track tag) {
+                  <span class="tag">{{ tag }}</span>
+                }
+              </div>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

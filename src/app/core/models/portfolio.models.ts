@@ -1,0 +1,59 @@
+export interface Experience {
+  date: string;
+  title: string;
+  org: string;
+  desc: string;
+  tags: string[];
+  accent?: boolean;
+}
+
+export interface Formation {
+  date: string;
+  title: string;
+  org: string;
+  desc: string;
+  tags?: string[];
+}
+
+export interface Projet {
+  numero: string;
+  icon: string;
+  title: string;
+  desc: string;
+  stack: string[];
+  featured?: boolean;
+}
+
+export interface SkillGroup {
+  icon: string;
+  title: string;
+  skills: string[];
+  wide?: boolean;
+}
+
+export interface Document {
+  icon: string;
+  badge: 'bts' | 'stage' | 'perso';
+  badgeLabel: string;
+  title: string;
+  desc: string;
+  date: string;
+  file?: string;
+}
+
+export interface VeilleItem {
+  category: string;
+  title: string;
+  body: string;
+  sources: string;
+}
+
+export interface Source {
+  name: string;
+  type: string;
+}
+
+export interface SoftSkill {
+  label: string;
+  value: number;
+}

@@ -1,0 +1,36 @@
+<section id="veille">
+  <app-section-label text="05 — Veille technologique" title="Ma veille tech" />
+
+  <p class="veille-intro" appScrollReveal="fade">
+    Dans le cadre de mon BTS SIO, j'effectue une veille technologique régulière afin de suivre
+    les évolutions du secteur du développement logiciel. Je m'intéresse particulièrement aux
+    frameworks web modernes, aux pratiques DevOps et à la sécurité applicative.
+  </p>
+
+  <div class="veille-grid">
+    @for (item of veilleItems; track item.title; let i = $index) {
+      <div class="veille-card" appScrollReveal="fade" [revealDelay]="i * 80">
+        <div class="veille-cat">
+          <span class="cat-dot"></span>
+          {{ item.category }}
+        </div>
+        <h3 class="veille-title">{{ item.title }}</h3>
+        <p class="veille-body">{{ item.body }}</p>
+        <div class="veille-sources">{{ item.sources }}</div>
+      </div>
+    }
+  </div>
+
+  <!-- Sources panel -->
+  <div class="sources-panel" appScrollReveal="fade" [revealDelay]="200">
+    <div class="sources-title">Mes sources de veille habituelles</div>
+    <div class="sources-grid">
+      @for (src of sources; track src.name) {
+        <div class="source-item">
+          <div class="source-name">{{ src.name }}</div>
+          <div class="source-type">{{ src.type }}</div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

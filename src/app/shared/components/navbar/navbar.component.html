@@ -1,0 +1,28 @@
+<nav [class.scrolled]="scrolled()">
+  <a class="nav-logo" (click)="scrollTo('#hero')">
+    EN<span>.</span>
+  </a>
+
+  <ul class="nav-links">
+    @for (link of links; track link.href) {
+      <li>
+        <a
+          [class.active]="activeSection() === link.href.replace('#','')"
+          (click)="scrollTo(link.href)"
+        >
+          {{ link.label }}
+        </a>
+      </li>
+    }
+    <li>
+      <button class="nav-cta" (click)="downloadCV()">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        CV
+      </button>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,78 @@
+    <section id="competences">
+      <app-section-label text="03 — Compétences" title="Stack & expertise" />
+
+      <div class="skills-layout">
+        <!-- SKILL GROUPS -->
+        <div class="skills-grid">
+          @for (group of skillGroups; track group.title; let i = $index) {
+            <div
+              class="skill-group"
+              [class.wide]="group.wide"
+              appScrollReveal = 'fade'
+              [revealDelay]="i * 80"
+            >
+              <div class="group-icon">{{ group.icon }}</div>
+              <div class="group-title">{{ group.title }}</div>
+              <ul class="skill-list">
+                @for (skill of group.skills; track skill) {
+                  <li>{{ skill }}</li>
+                }
+              </ul>
+            </div>
+          }
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="skills-sidebar">
+
+          <!-- Tech stack -->
+          <div class="sidebar-card" appScrollReveal="slide-right" [revealDelay]="0">
+            <div class="sidebar-title">Technologies</div>
+            <div class="tech-bubbles">
+              @for (tech of techStack; track tech) {
+                <span class="bubble" [class.primary]="isPrimary(tech)">{{ tech }}</span>
+              }
+            </div>
+          </div>
+
+          <!-- Soft skills -->
+          <div class="sidebar-card" appScrollReveal="slide-right" [revealDelay]="100">
+            <div class="sidebar-title">Soft skills</div>
+            <div class="soft-list">
+              @for (s of softSkills; track s.label) {
+                <div class="soft-item">
+                  <span class="soft-label">{{ s.label }}</span>
+                  <div class="soft-bar">
+                    <div
+                      #barFill
+                      class="soft-fill"
+                      [style.width.%]="s.value"
+                    ></div>
+                  </div>
+                </div>
+              }
+            </div>
+          </div>
+
+          <!-- Langues -->
+          <div class="sidebar-card" appScrollReveal="slide-right" [revealDelay]="200">
+            <div class="sidebar-title">Langues</div>
+            <div class="soft-list">
+              <div class="soft-item">
+                <span class="soft-label">Français</span>
+                <div class="soft-bar">
+                  <div #barFill class="soft-fill" [style.width.%]="100"></div>
+                </div>
+              </div>
+              <div class="soft-item">
+                <span class="soft-label">Anglais B1-B2</span>
+                <div class="soft-bar">
+                  <div #barFill class="soft-fill" [style.width.%]="65"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>

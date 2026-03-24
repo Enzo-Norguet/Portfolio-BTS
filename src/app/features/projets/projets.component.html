@@ -1,0 +1,24 @@
+<section id="projets">
+  <app-section-label text="02 — Projets" title="Mes réalisations" />
+
+  <div class="projects-grid">
+    @for (p of projets; track p.numero; let i = $index) {
+      <div
+        class="project-card"
+        [class.featured]="p.featured"
+        appScrollReveal="fade"
+        [revealDelay]="i * 80"
+      >
+        <div class="project-number">{{ p.numero }}</div>
+        <div class="project-icon">{{ p.icon }}</div>
+        <h3 class="project-title">{{ p.title }}</h3>
+        <p class="project-desc">{{ p.desc }}</p>
+        <div class="project-stack">
+          @for (tech of p.stack; track tech) {
+            <span class="tag" [class.accent]="i === 0">{{ tech }}</span>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</section>

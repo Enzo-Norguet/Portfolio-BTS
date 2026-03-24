@@ -1,0 +1,137 @@
+section {
+  padding: 100px 40px 120px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.veille-intro {
+  max-width: 680px;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.9;
+  margin-bottom: 48px;
+}
+
+.veille-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.veille-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+
+  &:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-3px);
+    &::after { transform: scaleX(1); }
+  }
+}
+
+.veille-cat {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cat-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.veille-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.veille-body {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+
+.veille-sources {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+/* Sources panel */
+.sources-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 30px;
+  margin-top: 4px;
+}
+
+.sources-title {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 22px;
+}
+
+.sources-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.source-item {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  transition: all 0.2s;
+  cursor: default;
+
+  &:hover { border-color: var(--border-hover); }
+}
+
+.source-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.source-type {
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+@media (max-width: 768px) {
+  section { padding: 80px 20px 80px; }
+  .veille-grid { grid-template-columns: 1fr; }
+  .sources-grid { grid-template-columns: repeat(2, 1fr); }
+}
