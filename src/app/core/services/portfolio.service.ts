@@ -165,21 +165,11 @@ export class PortfolioService {
   }
 
   getTechStack(): string[] {
-    return ['Angular', '.NET Core', 'Symfony', 'TypeScript', 'C#', 'PHP', 'SQL', 'Docker', 'Git', 'Capacitor', 'HTML/CSS', 'Linux'];
+    return ['Angular', '.NET Core', 'Symfony', 'TypeScript', 'C#','Tailwind', 'PHP', 'SQL', 'Docker', 'Git', 'Capacitor', 'HTML/CSS', 'Linux'];
   }
 
   getPrimaryTech(): string[] {
-    return ['Angular', '.NET Core', 'Symfony'];
-  }
-
-  getSoftSkills(): SoftSkill[] {
-    return [
-      { label: 'Motivation', value: 100 },
-      { label: 'Curiosité', value: 95 },
-      { label: 'Persévérance', value: 92 },
-      { label: 'Organisation', value: 88 },
-      { label: 'Polyvalence', value: 93 },
-    ];
+    return ['Angular', '.NET Core', 'Symfony', 'TypeScript', 'C#','Tailwind',];
   }
 
   getDocuments(): Document[] {

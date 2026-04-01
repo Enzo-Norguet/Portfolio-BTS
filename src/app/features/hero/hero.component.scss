@@ -92,7 +92,7 @@ section {
   .line-2 {
     display: block;
     color: transparent;
-    -webkit-text-stroke: 1px rgba(255,255,255,0.18);
+    -webkit-text-stroke: 1px rgba(179, 179, 179, 0.2);
     font-style: italic;
     font-family: var(--font-serif);
   }
@@ -142,7 +142,7 @@ section {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
     opacity: 0;
     transition: opacity 0.2s;
   }

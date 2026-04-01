@@ -15,7 +15,7 @@ import { ScrollRevealDirective } from '../../directives/scroll-reveal.directive'
   styles: [`
     .section-label {
       font-family: var(--font-body);
-      font-size: 10px;
+      font-size: 12px;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--accent);

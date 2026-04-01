@@ -35,25 +35,6 @@
             </div>
           </div>
 
-          <!-- Soft skills -->
-          <div class="sidebar-card" appScrollReveal="slide-right" [revealDelay]="100">
-            <div class="sidebar-title">Soft skills</div>
-            <div class="soft-list">
-              @for (s of softSkills; track s.label) {
-                <div class="soft-item">
-                  <span class="soft-label">{{ s.label }}</span>
-                  <div class="soft-bar">
-                    <div
-                      #barFill
-                      class="soft-fill"
-                      [style.width.%]="s.value"
-                    ></div>
-                  </div>
-                </div>
-              }
-            </div>
-          </div>
-
           <!-- Langues -->
           <div class="sidebar-card" appScrollReveal="slide-right" [revealDelay]="200">
             <div class="sidebar-title">Langues</div>
