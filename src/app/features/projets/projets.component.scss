@@ -1,6 +1,7 @@
 section {
-  padding: 100px 40px 120px;
-  margin: 0 auto;
+  padding: 100px 40px 120px 24px;
+  max-width: 100%;
+  margin: 0;
 }
 
 .projects-grid {
@@ -17,7 +18,8 @@ section {
   position: relative;
   overflow: hidden;
   transition: all 0.3s;
-  cursor: default;
+  cursor: pointer;
+  outline: none;
 
   &::before {
     content: '';
@@ -29,13 +31,14 @@ section {
     transition: opacity 0.3s;
   }
 
-  &:hover {
+  &:hover, &:focus-visible {
     border-color: var(--border-hover);
     background: var(--surface-2);
     transform: translateY(-4px);
     box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(99,179,237,0.08);
 
     &::before { opacity: 1; }
+    .card-hint { opacity: 1; transform: translateY(0); }
   }
 
   &.featured {
@@ -53,6 +56,29 @@ section {
   color: var(--border);
   line-height: 1;
   letter-spacing: -2px;
+  pointer-events: none;
+}
+
+.card-hint {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translate(-50%, 6px);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-glow);
+  border: 1px solid var(--border-hover);
+  padding: 4px 12px;
+  border-radius: 100px;
+  opacity: 0;
+  transition: all 0.25s ease;
+  white-space: nowrap;
   pointer-events: none;
 }
 

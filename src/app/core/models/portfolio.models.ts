@@ -22,6 +22,20 @@ export interface Projet {
   desc: string;
   stack: string[];
   featured?: boolean;
+
+  details?: string;
+  context?: string;
+  role?: string;
+  duration?: string;
+  images?: ProjetImage[];
+  liveUrl?: string;
+  repoUrl?: string;
+}
+
+export interface ProjetImage {
+  src: string;
+  alt: string;
+  caption?: string;
 }
 
 export interface SkillGroup {

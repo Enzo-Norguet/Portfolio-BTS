@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import  { Injectable } from '@angular/core';
 import {
   Experience, Formation, Projet,
   SkillGroup, Document, VeilleItem, Source, SoftSkill
@@ -65,10 +65,18 @@ export class PortfolioService {
       {
         numero: '01',
         icon: '🔄',
-        title: 'Refonte frontend defaco',
+        title: 'Refonte frontend Defaco',
         desc: 'Modernisation complète de l\'interface utilisateur d\'une application métier. Migration vers Angular avec une architecture en composants, services et appels API REST sécurisés.',
         stack: ['Angular', '.NET 10', 'TypeScript', 'REST API', 'GitLab CI/CD'],
         featured: true,
+        context: 'Stage de 6 semaines chez Defaco (janvier – février 2026). L\'entreprise souhaitait moderniser son application métier vieillissante en migrant vers une stack Angular + .NET 10.',
+        role: 'Développeur full-stack — conception de l\'architecture Angular, refonte complète de l\'UI, amélioration du backend .NET 10 et mise en place de la CI/CD GitLab.',
+        duration: '6 semaines',
+        details: 'Le projet consistait à refondre intégralement le frontend d\'une application de gestion métier. J\'ai analysé l\'existant, conçu l\'architecture Angular (composants standalone, services, routage), développé les nouveaux écrans et connecté l\'ensemble à l\'API REST .NET 10 existante que j\'ai également améliorée. J\'ai mis en place un pipeline GitLab CI/CD pour automatiser les tests et les déploiements.',
+        images: [
+          // { src: 'assets/projets/defaco-1.png', alt: 'Dashboard Defaco', caption: 'Nouveau dashboard Angular' },
+          // { src: 'assets/projets/defaco-2.png', alt: 'Vue liste', caption: 'Vue liste avec filtres' },
+        ],
       },
       {
         numero: '02',
@@ -76,6 +84,11 @@ export class PortfolioService {
         title: 'Migration Symfony',
         desc: 'Migration d\'une application web de Symfony 5.4 vers Symfony 7.3 chez Eaux de Vienne — analyse, refactorisation et tests.',
         stack: ['Symfony 7', 'PHP', 'SQL', 'Git'],
+        context: 'Stage de 5 semaines chez Eaux de Vienne (mai – juin 2025). La version Symfony 5.4 arrivant en fin de support, une migration vers Symfony 7.3 était nécessaire.',
+        role: 'Développeur backend — analyse de compatibilité, migration du code, résolution des dépréciations et tests fonctionnels.',
+        duration: '5 semaines',
+        details: 'J\'ai réalisé un audit complet de l\'application existante sous Symfony 5.4, identifié toutes les incompatibilités avec Symfony 7.3 et procédé à la migration étape par étape : mise à jour des dépendances Composer, adaptation des contrôleurs, services et templates Twig, correction des dépréciations et validation par tests.',
+        images: [],
       },
       {
         numero: '03',
@@ -83,6 +96,11 @@ export class PortfolioService {
         title: 'App mobile hybride',
         desc: 'Transformation d\'une application Angular en application mobile native Android/iOS via Capacitor.',
         stack: ['Angular', 'Capacitor', 'Android', 'iOS'],
+        context: 'Projet BTS SIO — l\'objectif était de rendre une application web Angular accessible en tant qu\'application native sur smartphone.',
+        role: 'Développeur mobile — intégration de Capacitor, configuration des projets Android/iOS, adaptation de l\'UI pour mobile.',
+        duration: 'Projet BTS',
+        details: 'À partir d\'une application Angular existante, j\'ai intégré Capacitor pour la transformer en application hybride. J\'ai configuré les projets natifs Android et iOS, adapté l\'interface aux contraintes mobile (responsive, gestures, safe areas) et utilisé les plugins Capacitor pour accéder aux fonctionnalités natives.',
+        images: [],
       },
       {
         numero: '04',
@@ -90,6 +108,11 @@ export class PortfolioService {
         title: 'API REST sécurisée',
         desc: 'Conception d\'une API REST avec .NET Core 8 (C#), authentification JWT et prévention des failles OWASP.',
         stack: ['.NET Core 8', 'C#', 'OWASP', 'JWT'],
+        context: 'Projet BTS SIO — conception d\'une API REST complète en suivant les bonnes pratiques de sécurité OWASP.',
+        role: 'Développeur backend — conception de l\'architecture REST, implémentation de l\'authentification JWT, sécurisation des endpoints.',
+        duration: 'Projet BTS',
+        details: 'Conception et développement d\'une API REST sécurisée avec .NET Core 8 et C#. J\'ai mis en place l\'authentification par JWT, la gestion des rôles, la validation des entrées, la protection contre les injections SQL, XSS et CSRF, en suivant les recommandations du Top 10 OWASP.',
+        images: [],
       },
       {
         numero: '05',
@@ -97,6 +120,11 @@ export class PortfolioService {
         title: 'Infrastructure DevOps',
         desc: 'Mise en place de conteneurs Docker et d\'une chaîne CI/CD via GitLab. Automatisation des déploiements.',
         stack: ['Docker', 'GitLab CI', 'DevOps', 'Linux'],
+        context: 'Projet BTS SIO — mise en place d\'une infrastructure conteneurisée avec automatisation complète du cycle de vie applicatif.',
+        role: 'DevOps — rédaction des Dockerfiles, configuration de docker-compose, écriture des pipelines GitLab CI/CD.',
+        duration: 'Projet BTS',
+        details: 'J\'ai conteneurisé une application web en rédigeant les Dockerfiles et le fichier docker-compose pour les environnements de développement et de production. J\'ai ensuite configuré une chaîne CI/CD sur GitLab avec des stages de build, test et déploiement automatique, réduisant significativement le temps de mise en production.',
+        images: [],
       },
       {
         numero: '06',
@@ -104,6 +132,11 @@ export class PortfolioService {
         title: 'Site PHP dynamique',
         desc: 'Conception d\'un site web interactif en PHP avec PDO, gestion des sessions et base de données relationnelle.',
         stack: ['PHP', 'PDO', 'MySQL', 'HTML/CSS'],
+        context: 'Projet BTS SIO — développement d\'un site web dynamique avec gestion complète des données côté serveur.',
+        role: 'Développeur full-stack — conception de la base de données, développement PHP, création de l\'interface HTML/CSS.',
+        duration: 'Projet BTS',
+        details: 'Développement d\'un site web dynamique en PHP avec PDO pour l\'accès sécurisé à la base de données MySQL. J\'ai conçu le schéma relationnel (Merise), développé les fonctionnalités CRUD, mis en place la gestion des sessions utilisateurs et sécurisé les formulaires contre les injections SQL.',
+        images: [],
       },
     ];
   }
