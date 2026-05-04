@@ -13,8 +13,8 @@ export class PortfolioService {
         date: 'Jan – Fév 2026',
         title: 'Stage — defaco',
         org: 'Développement full-stack',
-        desc: 'Refonte et modernisation du frontend de l\'application. Amélioration du backend en .NET 10. Intégration CI/CD avec GitLab.',
-        tags: ['Angular', '.NET 10', 'GitLab', 'CI/CD'],
+        desc: 'Refonte et modernisation du frontend de l\'application. Amélioration du backend en .NET 10. Utilisation de GitLab pour la gestion du projet.',
+        tags: ['Angular', '.NET 10', 'GitLab'],
         accent: true,
       },
       {

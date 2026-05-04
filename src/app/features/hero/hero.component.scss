@@ -1,10 +1,9 @@
 section {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: var(--nav-h) 40px 80px;
-  margin: 0 auto;
+  align-items: center;
+  padding: var(--nav-h) 40px 80px 24px;
+  width: 100%;
   position: relative;
   overflow: hidden;
 
@@ -13,13 +12,31 @@ section {
     position: absolute;
     inset: 0;
     background-image:
-      linear-gradient(var(--border) 1px, transparent 1px),
-      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+            linear-gradient(var(--border) 1px, transparent 1px),
+            linear-gradient(90deg, var(--border) 1px, transparent 1px);
     background-size: 60px 60px;
     mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
     pointer-events: none;
   }
 }
+
+/* ============================
+   TWO-COLUMN LAYOUT
+============================ */
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================
+   LEFT: TEXT CONTENT
+============================ */
+.hero-content { min-width: 0; }
 
 .orb {
   position: absolute;
@@ -47,6 +64,101 @@ section {
 }
 
 .hero-content { position: relative; z-index: 1; }
+
+/* ============================
+   RIGHT: PHOTO
+============================ */
+.hero-photo-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 500px;
+  margin-left: 5%;
+  flex-shrink: 0;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 1s;
+}
+
+/* Anneaux décoratifs */
+.photo-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed rgba(99,179,237,0.25);
+  animation: spin 20s linear infinite;
+  pointer-events: none;
+
+  &--outer {
+    inset: -24px;
+    animation-duration: 25s;
+  }
+  &--inner {
+    inset: -10px;
+    border-style: solid;
+    border-color: rgba(99,179,237,0.12);
+    animation-direction: reverse;
+    animation-duration: 18s;
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Cercle photo */
+.photo-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(99,179,237,0.3);
+  background: var(--surface);
+  box-shadow:
+          0 0 0 6px rgba(99,179,237,0.06),
+          0 24px 80px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* Placeholder si pas de photo */
+.photo-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--text-dim);
+  text-align: center;
+  padding: 20px;
+
+  svg { opacity: 0.3; }
+
+  span {
+    font-size: 11px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+
+  code {
+    font-family: var(--font-body);
+    font-size: 10px;
+    background: var(--surface-2);
+    color: var(--accent);
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+  }
+}
+
 
 .hero-tag {
   display: inline-flex;
@@ -89,13 +201,7 @@ section {
   animation: fadeUp 0.8s ease forwards 0.4s;
 
   .line-1 { display: block; color: var(--text); }
-  .line-2 {
-    display: block;
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(179, 179, 179, 0.2);
-    font-style: italic;
-    font-family: var(--font-serif);
-  }
+  .line-2 { display: block; color: var(--text); }
 }
 
 .hero-sub {
@@ -142,7 +248,7 @@ section {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
     opacity: 0;
     transition: opacity 0.2s;
   }
@@ -210,6 +316,15 @@ section {
 
 @media (max-width: 768px) {
   section { padding: 100px 20px 60px; }
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .hero-photo-wrapper {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+  }
   .hero-name { letter-spacing: -2px; }
   .hero-stats { gap: 28px; }
 }

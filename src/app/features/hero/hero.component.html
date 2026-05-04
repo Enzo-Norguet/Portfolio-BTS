@@ -1,55 +1,72 @@
 <section id="hero">
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
 
-  <div class="hero-content">
-    <div class="hero-tag">
-      <span class="dot"></span>
-      BTS SIO · Option SLAM · 2024–2026
+    <div class="hero-inner">
+
+        <div class="hero-content">
+            <div class="hero-tag">
+                <span class="dot"></span>
+                BTS SIO · Option SLAM · 2024–2026
+            </div>
+
+            <h1 class="hero-name">
+                <span class="line-1">Enzo</span>
+                <span class="line-2">Norguet</span>
+            </h1>
+
+            <p class="hero-sub">
+                Développeur full-stack passionné, spécialisé en
+                <strong>Angular</strong>, <strong>.NET Core</strong> et <strong>Symfony</strong>.<br/>
+                En recherche d'alternance pour une <strong>Licence Professionnelle</strong> sur Poitiers
+                — prêt à relever de nouveaux défis techniques.
+            </p>
+
+            <div class="hero-actions">
+                <button class="btn-primary" (click)="scrollToProjects()">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/>
+                    </svg>
+                    Voir mes projets
+                </button>
+                <button class="btn-ghost" (click)="downloadCV()">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Télécharger CV
+                </button>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-num">2<span>+</span></div>
+                    <div class="stat-label">Stages réalisés</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">6<span>+</span></div>
+                    <div class="stat-label">Technologies maîtrisées</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">20<span>ans</span></div>
+                    <div class="stat-label">Poitiers, France</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-photo-wrapper">
+            <div class="photo-ring photo-ring--outer"></div>
+            <div class="photo-ring photo-ring--inner"></div>
+            <div class="photo-circle">
+                <img
+                        src="assets/pdp.png"
+                        alt="Enzo Norguet"
+                        class="photo-img"
+                        onerror="this.style.display='none'; this.parentElement.querySelector('.photo-placeholder').style.display='flex';"
+                />
+            </div>
+        </div>
+
     </div>
-
-    <h1 class="hero-name">
-      <span class="line-1">Enzo</span>
-      <span class="line-1">Norguet</span>
-    </h1>
-
-    <p class="hero-sub">
-      Développeur full-stack passionné, spécialisé en
-      <strong>Angular</strong>, <strong>.NET Core</strong> et <strong>Symfony</strong>.<br/>
-      En recherche d'alternance pour une <strong>Licence Professionnelle</strong> sur Poitiers
-      — prêt à relever de nouveaux défis techniques.
-    </p>
-
-    <div class="hero-actions">
-      <button class="btn-primary" (click)="scrollToProjects()">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/>
-        </svg>
-        Voir mes projets
-      </button>
-      <button class="btn-ghost" (click)="downloadCV()">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-          <polyline points="7 10 12 15 17 10"/>
-          <line x1="12" y1="15" x2="12" y2="3"/>
-        </svg>
-        Télécharger CV
-      </button>
-    </div>
-
-    <div class="hero-stats">
-      <div class="stat">
-        <div class="stat-num">2<span>+</span></div>
-        <div class="stat-label">Stages réalisés</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">10<span>+</span></div>
-        <div class="stat-label">Technologies maîtrisées</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">21<span> ans</span></div>
-        <div class="stat-label">Poitiers, France</div>
-      </div>
-    </div>
-  </div>
 </section>
