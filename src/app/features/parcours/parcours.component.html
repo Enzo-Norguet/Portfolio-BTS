@@ -43,11 +43,11 @@
             <div class="timeline-org">{{ f.org }}</div>
             <div class="timeline-desc">{{ f.desc }}</div>
             @if (f.tags?.length) {
-              <div class="timeline-tags">
-                @for (tag of f.tags!; track tag) {
-                  <span class="tag">{{ tag }}</span>
-                }
-              </div>
+                <div class="timeline-tags">
+                    @for (tag of f.tags; track tag) {
+                        <span class="tag" [class.accent]="f.accent">{{ tag }}</span>
+                    }
+                </div>
             }
           </div>
         }

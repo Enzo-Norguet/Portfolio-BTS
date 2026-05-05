@@ -13,6 +13,8 @@ export interface Formation {
   org: string;
   desc: string;
   tags?: string[];
+  accent?: boolean;
+
 }
 
 export interface Projet {
@@ -53,6 +55,20 @@ export interface Document {
   desc: string;
   date: string;
   file?: string;
+}
+
+export interface VeilleEntry {
+  date: string;    // ex: "Février 2025"
+  content: string;
+  source: string;
+}
+
+export interface VeilleAxe {
+  id: string;
+  icon: string;
+  title: string;
+  intro: string;
+  entries: VeilleEntry[];
 }
 
 export interface VeilleItem {
