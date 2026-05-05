@@ -25,7 +25,7 @@ export interface Projet {
 
   details?: string;
   context?: string;
-  role?: string;
+  features?: string[];
   duration?: string;
   images?: ProjetImage[];
   liveUrl?: string;
@@ -69,5 +69,4 @@ export interface Source {
 
 export interface SoftSkill {
   label: string;
-  value: number;
 }

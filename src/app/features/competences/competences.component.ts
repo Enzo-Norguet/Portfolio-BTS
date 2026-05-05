@@ -17,6 +17,7 @@ export class CompetencesComponent implements AfterViewInit {
   skillGroups = this.svc.getSkillGroups();
   techStack   = this.svc.getTechStack();
   primaryTech = this.svc.getPrimaryTech();
+  softSkills = this.svc.getSoftSkills()
 
   @ViewChildren('barFill') barFills!: QueryList<ElementRef<HTMLElement>>;
 

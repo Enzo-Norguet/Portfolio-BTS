@@ -1,7 +1,6 @@
 section {
   padding: 100px 40px 120px 24px;
-  max-width: 100%;
-  margin: 0;
+  width: 100%;
 }
 
 .projects-grid {
@@ -42,7 +41,6 @@ section {
   }
 
   &.featured {
-    grid-column: span 2;
     background: linear-gradient(135deg, var(--surface) 0%, rgba(99,179,237,0.04) 100%);
   }
 }
@@ -135,10 +133,8 @@ section {
 
 @media (max-width: 900px) {
   .projects-grid { grid-template-columns: 1fr 1fr; }
-  .project-card.featured { grid-column: span 2; }
 }
 @media (max-width: 600px) {
   section { padding: 80px 20px 80px; }
   .projects-grid { grid-template-columns: 1fr; }
-  .project-card.featured { grid-column: span 1; }
 }
