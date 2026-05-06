@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {
     Experience, Formation, Projet,
-    SkillGroup, Document, VeilleItem, Source, SoftSkill, VeilleAxe
+    SkillGroup, Document, Source, SoftSkill, VeilleAxe
 } from '../models/portfolio.models';
 
 @Injectable({providedIn: 'root'})
@@ -323,7 +323,7 @@ export class PortfolioService {
                 icon: '⚙️',
                 title: 'Backend',
                 skills: [
-                    '.NET Core 8, 10 / C# — API REST',
+                    '.NET 8, 10 / C# — API REST',
                     'Symfony  / PHP / PDO / POO',
                     'Authentification & sécurité JWT',
                     'Architecture MVC & services',
@@ -373,11 +373,11 @@ export class PortfolioService {
     }
 
     getTechStack(): string[] {
-        return ['Angular', '.NET Core', 'Symfony', 'TypeScript', 'C#', 'Tailwind', 'PHP', 'SQL', 'Docker', 'Git', 'Capacitor', 'HTML/CSS', 'Linux'];
+        return ['Angular', '.NET', 'Symfony', 'TypeScript', 'C#', 'Tailwind', 'PHP', 'SQL', 'Docker', 'Git', 'Capacitor', 'HTML/CSS', 'Linux'];
     }
 
     getPrimaryTech(): string[] {
-        return ['Angular', '.NET Core', 'Symfony', 'TypeScript', 'C#', 'Tailwind',];
+        return ['Angular', '.NET', 'Symfony', 'TypeScript', 'C#', 'Tailwind',];
     }
 
     getSoftSkills(): SoftSkill[] {
@@ -398,35 +398,39 @@ export class PortfolioService {
         return [
             {
                 icon: '📋',
-                badge: 'bts',
-                badgeLabel: 'BTS SIO',
-                title: 'Cahier des charges — Projet Angular',
-                desc: 'Rédaction complète du cahier des charges pour le projet de développement d\'une application Angular en BTS.',
+                badge: 'stage',
+                badgeLabel: 'Stage',
+                title: 'Cahier des charges — defaco',
+                desc: 'Rédaction complète du cahier des charges pour le projet du stage dans l\'entreprise Defaco.',
                 date: '2025',
+                file: 'assets/projets/Cahier_des_charges_defaco.pdf'
             },
             {
                 icon: '🏢',
                 badge: 'stage',
                 badgeLabel: 'Stage',
-                title: 'Rapport de stage — Eaux de Vienne',
-                desc: 'Rapport complet du stage mai-juin 2025 : migration Symfony 5.4 → 7.3, contexte, réalisations et bilan.',
+                title: 'Carnet de bord — Eaux de Vienne',
+                desc: 'Carnet de bord du stage mai-juin 2025 : migration Symfony 5.4 → 7.3, contexte, réalisations et bilan.',
                 date: 'Juin 2025',
+                file: 'assets/projets/Carnet_bord_siveer.pdf',
             },
             {
                 icon: '🏢',
                 badge: 'stage',
                 badgeLabel: 'Stage',
-                title: 'Rapport de stage — defaco',
-                desc: 'Rapport du stage janvier-février 2026 : refonte frontend Angular et amélioration backend .NET 10.',
+                title: 'Carnet de bord — defaco',
+                desc: 'Carnet de bord janvier-février 2026 : refonte frontend Angular et amélioration backend .NET 10.',
                 date: 'Fév 2026',
+                file: 'assets/projets/Carnet_bord_defaco.pdf'
             },
             {
                 icon: '📊',
                 badge: 'bts',
                 badgeLabel: 'BTS SIO',
-                title: 'Dossier PPE — Projet Professionnel Encadré',
-                desc: 'Documentation complète des projets professionnels encadrés réalisés en BTS SIO.',
-                date: '2025–2026',
+                title: 'Fiche de procédure Angular',
+                desc: 'Fiche de procédure Angular faite pour mon stage de 1ère année.',
+                date: 'Juin 2025',
+                file: 'assets/projets/Angular.pdf',
             },
             {
                 icon: '🔍',
@@ -435,6 +439,7 @@ export class PortfolioService {
                 title: 'Veille technologique — Dossier',
                 desc: 'Dossier de veille technologique réalisé au cours du BTS SIO sur les technologies web modernes.',
                 date: '2026',
+                file: 'assets/projets/Veille.pdf'
             },
             {
                 icon: '📄',
