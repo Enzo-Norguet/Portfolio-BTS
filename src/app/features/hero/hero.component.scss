@@ -243,3 +243,156 @@ section {
   .hero-name { letter-spacing: -2px; }
   .hero-stats { gap: 28px; }
 }
+
+/* ============================
+   RIGHT: VISUAL DÉCORATIF
+============================ */
+.hero-visual {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.5s;
+}
+
+/* Grille de points */
+.visual-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--border) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 40%, transparent 100%);
+  pointer-events: none;
+}
+
+/* Cartes génériques */
+.visual-card {
+  position: absolute;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+  z-index: 2;
+}
+
+/* Carte principale */
+.card-main {
+  width: 200px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-color: var(--border-hover);
+  box-shadow: 0 0 40px rgba(99,179,237,0.08);
+  animation: floatY 5s ease-in-out infinite;
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+.visual-initials {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(99,179,237,0.1);
+  border: 1px solid rgba(99,179,237,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: -1px;
+}
+
+.visual-title {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+
+.visual-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+
+  span {
+    font-size: 10px;
+    padding: 3px 9px;
+    border-radius: 100px;
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+  }
+}
+
+/* Badges flottants */
+.card-badge {
+  padding: 8px 14px;
+  font-size: 11px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  font-family: var(--font-body);
+}
+
+.badge-top {
+  top: 30px;
+  right: 0;
+  animation: floatY 6s ease-in-out infinite 1s;
+}
+
+.badge-bottom {
+  bottom: 60px;
+  left: 0;
+  animation: floatY 7s ease-in-out infinite 2s;
+}
+
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 6px rgba(74,222,128,0.6);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Bloc code */
+.card-code {
+  bottom: 20px;
+  right: 10px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  animation: floatY 6s ease-in-out infinite 0.5s;
+}
+
+.code-line {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.code-kw  { color: #c792ea; }
+.code-str { color: #c3e88d; }
+.code-fn  { color: var(--accent); }
+
+/* Masque sur mobile */
+@media (max-width: 768px) {
+  .hero-visual { display: none; }
+}
