@@ -44,4 +44,10 @@ export class DocumentsComponent {
       a.click();
     }
   }
+
+  viewDoc(doc: Document): void {
+    if (doc.file) {
+      window.open(doc.file, '_blank');
+    }
+  }
 }

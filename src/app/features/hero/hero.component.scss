@@ -68,37 +68,7 @@ section {
 /* ============================
    RIGHT: PHOTO
 ============================ */
-.hero-photo-wrapper {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1;
-  max-width: 500px;
-  margin-left: 5%;
-  flex-shrink: 0;
-  opacity: 0;
-  animation: fadeUp 0.8s ease forwards 1s;
-}
 
-/* Anneaux décoratifs */
-.photo-ring {
-  position: absolute;
-  border-radius: 50%;
-  border: 1px dashed rgba(99,179,237,0.25);
-  animation: spin 20s linear infinite;
-  pointer-events: none;
-
-  &--outer {
-    inset: -24px;
-    animation-duration: 25s;
-  }
-  &--inner {
-    inset: -10px;
-    border-style: solid;
-    border-color: rgba(99,179,237,0.12);
-    animation-direction: reverse;
-    animation-duration: 18s;
-  }
-}
 
 @keyframes spin {
   from { transform: rotate(0deg); }
@@ -251,7 +221,7 @@ section {
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--text-dim);
+  color: whitesmoke;
 }
 
 @keyframes fadeUp {

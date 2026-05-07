@@ -1,45 +1,56 @@
 <section id="documents">
-  <app-section-label text="04 — Documents" title="Documentation BTS" />
+    <app-section-label text="04 — Documents" title="Documentation BTS"/>
 
-  <!-- Filters -->
-  <div class="docs-filter">
-    @for (f of filters; track f.key) {
-      <button
-        class="filter-btn"
-        [class.active]="activeFilter() === f.key"
-        (click)="setFilter(f.key)"
-      >
-        {{ f.label }}
-      </button>
-    }
-  </div>
-
-  <!-- Grid -->
-  <div class="docs-grid">
-    @for (doc of filteredDocs(); track doc.title; let i = $index) {
-      <div class="doc-card" appScrollReveal="fade" [revealDelay]="i * 60">
-        <div class="doc-header">
-          <div class="doc-icon">{{ doc.icon }}</div>
-          <span class="doc-badge" [ngClass]="doc.badge">{{ doc.badgeLabel }}</span>
-        </div>
-        <div class="doc-title">{{ doc.title }}</div>
-        <div class="doc-desc">{{ doc.desc }}</div>
-        <div class="doc-footer">
-          <span class="doc-date">{{ doc.date }}</span>
-          @if (doc.file) {
-            <button class="doc-dl" (click)="downloadDoc(doc)">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                <polyline points="7 10 12 15 17 10"/>
-                <line x1="12" y1="15" x2="12" y2="3"/>
-              </svg>
-              Télécharger
+    <!-- Filters -->
+    <div class="docs-filter">
+        @for (f of filters; track f.key) {
+            <button
+                    class="filter-btn"
+                    [class.active]="activeFilter() === f.key"
+                    (click)="setFilter(f.key)"
+            >
+                {{ f.label }}
             </button>
-          } @else {
-            <span class="doc-soon">Bientôt disponible</span>
-          }
-        </div>
-      </div>
-    }
-  </div>
+        }
+    </div>
+
+    <!-- Grid -->
+    <div class="docs-grid">
+        @for (doc of filteredDocs(); track doc.title; let i = $index) {
+            <div class="doc-card" appScrollReveal="fade" [revealDelay]="i * 60">
+                <div class="doc-header">
+                    <div class="doc-icon">{{ doc.icon }}</div>
+                    <span class="doc-badge" [ngClass]="doc.badge">{{ doc.badgeLabel }}</span>
+                </div>
+                <div class="doc-title">{{ doc.title }}</div>
+                <div class="doc-desc">{{ doc.desc }}</div>
+                <div class="doc-footer">
+                    <span class="doc-date">{{ doc.date }}</span>
+                    @if (doc.file) {
+                        <div class="doc-actions">
+                            <button class="doc-view" (click)="viewDoc(doc)">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                     stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                Voir
+                            </button>
+                            <button class="doc-dl" (click)="downloadDoc(doc)">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                     stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="7 10 12 15 17 10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                                Télécharger
+                            </button>
+                        </div>
+                    } @else {
+                        <span class="doc-soon">Bientôt disponible</span>
+                    }
+                </div>
+            </div>
+        }
+    </div>
 </section>
