@@ -448,7 +448,7 @@ export class PortfolioService {
                 title: 'Gestion du parc informatique et des tickets Eaux de Vienne',
                 desc: 'Fiche réalisé en stage de 2è année concernant la gestion du parc informatique et des tickets.',
                 date: '2026',
-                file: 'assets/projets/Gestion_parc_et_tickets_defaco.pdf',
+                file: 'assets/projets/Gestion_parc_et_tickets_siveer.pdf',
             },
             {
                 icon: '📊',
