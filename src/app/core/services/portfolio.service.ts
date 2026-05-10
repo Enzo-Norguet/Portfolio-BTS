@@ -99,10 +99,10 @@ export class PortfolioService {
                     {
                         src: 'assets/projets/PageDevisV2.png',
                         alt: 'Vue liste',
-                        caption: 'Nouvelle vue Bons De Commande',
+                        caption: 'Nouvelle vue Devis',
                     },
                     {
-                        src: 'assets/projets/PageCommandeV2.png',
+                        src: 'assets/projets/PageCommandeV1.jpg',
                         alt: 'Vue liste',
                         caption: 'Ancienne vue Commande'
                     },
@@ -111,6 +111,37 @@ export class PortfolioService {
                         alt: 'Vue liste',
                         caption: 'Nouvelle vue Commande'
                     },
+                    {
+                        src: 'assets/projets/PageFacturesImpayéesV1.png',
+                        alt: 'Vue liste',
+                        caption: 'Ancienne vue PageFacturesImpayées'
+                    },
+                    {
+                        src: 'assets/projets/PageFacturesImpayéesV2.png',
+                        alt: 'Vue liste',
+                        caption: 'Nouvelle vue PageFacturesImpayées'
+                    },
+                    {
+                        src: 'assets/projets/PageFacturesValidéesV1.png',
+                        alt: 'Vue liste',
+                        caption: 'Ancienne vue PageFacturesValidées'
+                    },
+                    {
+                        src: 'assets/projets/PageFactureValidéeV2.png',
+                        alt: 'Vue liste',
+                        caption: 'Nouvelle vue PageFacturesValidées'
+                    },
+                    {
+                        src: 'assets/projets/PageFacturesÉmisesV1.png',
+                        alt: 'Vue liste',
+                        caption: 'Ancienne vue PageFacturesÉmises'
+                    },
+                    {
+                        src: 'assets/projets/PageFacturesÉmisesV2.png',
+                        alt: 'Vue liste',
+                        caption: 'Nouvelle vue PageFacturesÉmises'
+                    },
+
                 ],
             },
             {
@@ -134,14 +165,17 @@ export class PortfolioService {
                 numero: '03',
                 icon: '📱',
                 title: 'BeReady',
-                desc: 'Création et transformation d\'une application Angular en application mobile native Android/iOS via Capacitor.',
-                stack: ['Angular', 'Capacitor', 'Android', 'iOS', 'Ionic'],
-                context: 'Projet BTS SIO — l\'objectif était de rendre une application web Angular accessible en tant qu\'application native sur smartphone.',
+                desc: 'Application mobile sociale et gamifiée développée en équipe de quatre dans le cadre d\'un projet d\'AP de 2e année BTS, autour d\'un système de défis quotidiens.',
+                stack: ['Angular', 'C#', 'Android', 'iOS', 'Ionic'],
+                context: 'Le projet simule une commande client pour l\'entreprise fictive MESC : une application destinée à un public jeune, où chaque utilisateur relève un défi proposé chaque jour et publie une photo comme preuve de réalisation. L\'objectif est de combiner l\'engagement des défis avec les mécaniques d\'un réseau social.',
                 features: [
-                    'Intégration de Capacitor dans le projet Angular',
-                    'Configuration des projets natifs Android et iOS',
-                    'Adaptation de l\'UI pour mobile (responsive, safe areas)',
-                    'Utilisation des plugins Capacitor natifs',
+                    'Défi quotidien identique pour tous les utilisateurs, avec publication de photo comme preuve.',
+                    'Fil de publications visible par tous jusqu\'au défi suivant, avec filtre amis / global.',
+                    'Système d\'amis : ajout, consultation des profils et des publications.',
+                    'Système de likes contribuant à un classement global des utilisateurs.',
+                    'Profil utilisateur complet : défis réalisés, plus longue série, likes reçus, succès débloqués, titres actifs.',
+                    'Messagerie de groupe privée : création, gestion des membres (ajout, suppression, promotion) par l\'administrateur du groupe.',
+                    'Système de succès et titres pour valoriser les utilisateurs les plus actifs.',
                 ],
                 duration: '3 mois',
                 details: 'À partir d\'une application Angular que l\'on a créée en groupe, nous avons intégré Capacitor pour la transformer en application hybride. Nous avons configuré les projets natifs Android et iOS, adapté l\'interface aux contraintes mobile (responsive, gestures, safe areas) et utilisé les plugins Capacitor pour accéder aux fonctionnalités natives.',
@@ -377,7 +411,7 @@ export class PortfolioService {
     }
 
     getPrimaryTech(): string[] {
-        return ['Angular', '.NET', 'Symfony', 'TypeScript', 'C#', 'Tailwind',];
+        return ['Angular', '.NET', 'Symfony', 'TypeScript', 'C#', 'Tailwind', 'PHP'];
     }
 
     getSoftSkills(): SoftSkill[] {
@@ -557,6 +591,114 @@ export class PortfolioService {
                 desc: 'Fiche de procédure réalisé en stage de 1è année pour connaître le fonctionnement de Git et GitHub.',
                 date: '2025',
                 file: 'assets/projets/Fiche _procédure_Git_GitHub.pdf',
+            },
+            {
+                icon: '📊',
+                badge: 'bts',
+                badgeLabel: 'BTS SIO',
+                title: 'Fiche mémo PHP',
+                desc: 'Fiche mémo réalisée sur les bases de php.',
+                date: '2025',
+                file: 'assets/projets/mémo_php.pdf',
+            },
+            {
+                icon: '📊',
+                badge: 'bts',
+                badgeLabel: 'BTS SIO',
+                title: 'TP sur le plan de reprise d\'activité d\'une entreprise',
+                desc: 'TP réalisée en fin de deuxième année de BTS SIO pour nous apprendre ce qu\'est un plan de reprise d\'activité',
+                date: '2026',
+                file: 'assets/projets/PRA_OmniWeb.pdf',
+            },
+            {
+                icon: '📊',
+                badge: 'bts',
+                badgeLabel: 'BTS SIO',
+                title: 'Veille technologique BTS SIO',
+                desc: 'Veille technologique visant deux sujets que j\'ai choisi et que je devais suivre durant les deux années de BTS SIO.',
+                date: '2026',
+                file: 'assets/projets/Veille.pdf',
+            },
+            {
+                icon: '📊',
+                badge: 'bts',
+                badgeLabel: 'BTS SIO',
+                title: 'Documentation et tutoriel sur postGreSQL',
+                desc: 'Tuto réalisée en cours de première année de BTS SIO afin de savoir comment installer et utiliser postGreSQL.',
+                date: '2025',
+                file: 'assets/projets/tuto_postgresql.pdf',
+            },
+            {
+                icon: '📊',
+                badge: 'bts',
+                badgeLabel: 'BTS SIO',
+                title: 'Fiche de procédure Référencement Web',
+                desc: 'Fiche de procédure réalisée sur le référencement web en deuxième année de BTS SIO.',
+                date: '2026',
+                file: 'assets/projets/Référencement_web.pdf',
+            },
+            {
+                icon: '📊',
+                badge: 'bts',
+                badgeLabel: 'BTS SIO',
+                title: 'Mémo sécurisation d\'API',
+                desc: 'Mémo réalisée en deuxième année de BTS SIO sur la sécurisation d\'api.',
+                date: '2026',
+                file: 'assets/projets/Mémo_sécurisation_api.pdf',
+            },
+            {
+                icon: '📊',
+                badge: 'bts',
+                badgeLabel: 'BTS SIO',
+                title: 'Mémo postgreSQL',
+                desc: 'Mémo réalisée en deuxième année de BTS SIO sur la programmation avec postgreSQL.',
+                date: '2026',
+                file: 'assets/projets/Mémo_postgreSQL.pdf',
+            },
+            {
+                icon: '📊',
+                badge: 'bts',
+                badgeLabel: 'BTS SIO',
+                title: 'Mémo commandes Linux',
+                desc: 'Mémo réalisée en première année de BTS SIO sur les diffèrentes commandes Linux à connaître.',
+                date: '2025',
+                file: 'assets/projets/Mémo_commandes_linux.pdf',
+            },
+            {
+                icon: '📊',
+                badge: 'bts',
+                badgeLabel: 'BTS SIO',
+                title: 'Mémo Man in the middle',
+                desc: 'Mémo réalisée en première année de BTS SIO sur Man in the middle.',
+                date: '2025',
+                file: 'assets/projets/Fiche_mémo_mitm.pdf',
+            },
+            {
+                icon: '📊',
+                badge: 'bts',
+                badgeLabel: 'BTS SIO',
+                title: 'Documentation sur les failles CSRF',
+                desc: 'Documentation réalisée en première année de BTS SIO sur les failles CSRF.',
+                date: '2025',
+                file: 'assets/projets/Documentation_faille_csrf.pdf',
+            },
+            {
+                icon: '📊',
+                badge: 'bts',
+                badgeLabel: 'BTS SIO',
+                title: 'Fiche mémo htacess',
+                desc: 'Fiche mémo réalisée sur les fichiers.htaccess en première année de BTS SIO.',
+                date: '2025',
+                file: 'assets/projets/Fiche_htaccess.pdf',
+            },
+            {
+                icon: '📊',
+                badge: 'bts',
+                badgeLabel: 'BTS SIO',
+                title: 'Fiche notion ITIL',
+                desc: 'Fiche réalisée sur en deuxième année de BTS SIO ayant pour but d\'introduire la notion d\'ITIL.',
+                date: '2026',
+                file: 'assets/projets/ITIL.pdf',
             },
 
         ];

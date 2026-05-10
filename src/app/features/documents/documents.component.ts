@@ -24,7 +24,6 @@ export class DocumentsComponent {
     { key: 'all',   label: 'Tous' },
     { key: 'bts',   label: 'BTS SIO' },
     { key: 'stage', label: 'Stages' },
-    { key: 'perso', label: 'Personnel' },
   ];
 
   filteredDocs = computed<Document[]>(() => {
